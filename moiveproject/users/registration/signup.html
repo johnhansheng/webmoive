@@ -1,0 +1,20 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<form class="ui last-related form"novalidate method="post" action="{url 'users:signup' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="ui stacked segment">
+        <div class="field">
+            {{form.username}}
+        </div>
+        <div class="field">
+            {{form.password1}}
+        </div>>
+        <div class="field">
+            {{form.password2}}
+        </div>>
+        <button class="ui submit button",type="submit">注册</button>
+    </div>>
+    {% include "base/form_errors.html" %}
+</form>
+</html>
